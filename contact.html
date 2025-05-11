@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Thinkio</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" type="image/png" href="foto/puzzle.png">
+    <script>
+    function kirimPesan() {
+        var nama = document.getElementById("nama").value.trim();
+        var email = document.getElementById("email").value.trim();
+
+        // Cek apakah ada checkbox yang dipilih
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checked = Array.from(checkboxes).some(cb => cb.checked);
+
+        if (nama === "" || email === "" || !checked) {
+            alert("Harap input semua data!");
+            return false; // Mencegah submit
+        } else {
+            alert("Pesan Anda telah terkirim!");
+
+            // ✅ Reset form
+            document.querySelector("form").reset();
+
+            return false; // Supaya tidak reload halaman
+        }
+    }
+    </script>
+</head>
+<body>
+    <center>
+    <div class="form-box">
+    <form onsubmit="return kirimPesan()">
+        <fieldset>
+            <legend>Form Pendaftaran</legend>
+            <p>Nama : <input type="text" id="nama" name="nama"></p>
+            <p>Email : <input type="text" id="email" name="email"></p>
+            <p>
+                Minat Belajar : <br>
+                    <input type="checkbox" name="minat" value="bio"> Biologi
+                    <input type="checkbox" name="minat" value="kimia"> Kimia
+                    <input type="checkbox" name="minat" value="fisika"> Fisika
+                    <input type="checkbox" name="minat" value="mtk"> Matematika
+                    <input type="checkbox" name="minat" value="sejarah"> Sejarah
+                    <input type="checkbox" name="minat" value="ekonomi"> Ekonomi
+                    <input type="checkbox" name="minat" value="geo"> Geografi
+                    <input type="checkbox" name="minat" value="sosio"> Sosiologi
+            </p>
+            <p><input type="submit" value="Submit"></p>
+        </fieldset>
+    </form>
+    </div>
+    </center>
+     <div class="back">
+        <a href="index.html">Home</a>
+    </div>
+</body>
+</html>

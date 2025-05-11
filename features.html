@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features Thinkio</title>
+    <link rel="icon" type="image/png" href="foto/puzzle.png">
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(0deg, rgba(249, 215, 231, 1) 0%, rgba(227, 203, 244, 1) 50%, rgba(200, 225, 255, 1) 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .box-fitur {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* agar tetap responsif di layar kecil */
+        gap: 20px; /* jarak antar fitur */
+        margin: 20px 0;
+        }
+
+        .fitur {
+        width: 250px;
+        text-align: center;
+        }
+
+        .fitur img {
+        border-radius: 10px;
+        }
+
+        .feature {
+            margin-bottom: 20px;
+        }
+        video {
+            max-width: 100%;
+        }
+
+        .back {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999; /* supaya tetap di atas elemen lain */
+        }
+
+        .back a {
+            font-size: 18px;
+            color: #5c73ad;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            background-color: transparent; /* bisa diubah sesuai kebutuhan */
+        }
+
+        .back a:hover {
+            background-color: #5c73ad;
+            color: #ffffff;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <h2>Fitur Thinkio</h2>
+    <div class="box-fitur">
+    <div class="fitur">
+        <img src="foto/quiz.jpg" alt="Kuis" style="width: 215; height: 215px;">
+        <p>Kuis interaktif untuk latihan menyenangkan</p>
+    </div>
+    <div class="fitur">
+        <img src="foto/video.jpg" alt="Video" style="width: 215; height: 215px;">
+        <p>Materi pembelajaran dalam bentuk video</p>
+    </div>
+    <div class="fitur">
+        <img src="foto/chatbot.jpg" alt="Chatbot" style="width: 215; height: 215px;">
+        <p>Chatbot setia untuk menjawab setiap pertanyaanmu</p>
+    </div>
+    </div>
+    <h2>Video Pembelajaran</h2>
+    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/d33u16SxB0Y" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="back">
+        <a href="index.html">Home</a>
+    </div>
+</body>
+</html>

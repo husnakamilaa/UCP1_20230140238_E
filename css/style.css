@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(0deg, rgba(249, 215, 231, 1) 0%, rgba(227, 203, 244, 1) 50%, rgba(200, 225, 255, 1) 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-animation {
+  font-size: 3rem;
+  margin: 0 auto;
+  width: fit-content;
+  color: #5c73ad;
+  text-align: center;
+}
+
+.typing-animation span {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid rgba(255, 255, 255, 0.75);
+  animation: typing-loop 6s steps(23) infinite, blink 0.75s step-end infinite;
+}
+
+@keyframes typing-loop {
+  0%   { width: 0 }
+  40%  { width: 23ch }
+  60%  { width: 23ch }
+  100% { width: 0 }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: rgba(255, 255, 255, 0.75) }
+}
+
+#promoPopup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: linear-gradient(to bottom right, #ffffff, #f1f1f1);
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#promoPopup.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+    #promoPopup h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    #promoPopup p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    #promoPopup button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff5c5c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s ease;
+    }
+
+     #promoPopup button:hover {
+      background-color: #e04848;
+    }
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    background: none; /* pastikan background tidak ada */
+    position: fixed; /* Memperbaiki posisi navbar di atas */
+    top: 20px; /* Posisikan di atas halaman */
+    left: 50%; /* Posisikan di tengah horizontal */
+    transform: translateX(-50%); /* Sesuaikan posisi agar benar-benar di tengah */
+    z-index: 10; /* Menempatkan navbar di atas konten lainnya */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    margin: 0;
+    color: #5c73ad;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px; /* Ukuran font diperbesar */
+}
+
+nav a:hover {
+    color: #b984e0; /* Ubah warna saat hover */
+    transform: scale(1.1); /* Efek pembesaran sedikit saat hover */
+}
+
+.description {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+  max-width: 600px;
+  color: #5c73ad;
+  text-align: center; /* Buat teksnya rata tengah */
+  margin-left: auto;
+  margin-right: auto;
+}

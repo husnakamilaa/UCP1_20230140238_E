@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(0deg, rgba(249, 215, 231, 1) 0%, rgba(227, 203, 244, 1) 50%, rgba(200, 225, 255, 1) 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+table {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90%; /* batasi lebar maksimum */
+  max-width: 800px; /* supaya tidak terlalu lebar di layar besar */
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.8); /* agar tampak lebih kontras */
+  border-radius: 10px;
+  overflow: hidden; /* supaya radius berlaku untuk semua */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* soft shadow */
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #555;
+  text-align: center;
+}
+
+th {
+  background-color: #f0e6ff;
+  color: #333;
+  font-weight: 600;
+}
+
+.box {
+  background-color: rgba(255, 255, 255, 0.4); /* transparan putih */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); /* white soft shadow */
+  backdrop-filter: blur(5px); /* efek kaca buram */
+  -webkit-backdrop-filter: blur(5px); /* dukungan untuk Safari */
+}
+
+.back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999; /* supaya tetap di atas elemen lain */
+}
+
+.back a {
+    font-size: 18px;
+    color: #5c73ad;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-color: transparent; /* bisa diubah sesuai kebutuhan */
+}
+
+.back a:hover {
+    background-color: #5c73ad;
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#promoPopup {
+      display: none;
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      border: 2px solid #888;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+    }
